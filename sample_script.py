@@ -19,7 +19,7 @@ driver.get('https://www.google.com/')
 search = driver.find_element(By.NAME, 'q')
 search.clear()
 search.send_keys('Car')
-
+#
 # wait for 4 sec
 sleep(4)
 #
