@@ -1,4 +1,4 @@
-![alt text](https://github.com/idyakov/inter_project/test_structure.png)
+![alt text](https://github.com/idyakov/inter_project/blob/main/test_structure.png)
 
 Feature: Test Scenarios for Search functionality of soft.reelly page
 
