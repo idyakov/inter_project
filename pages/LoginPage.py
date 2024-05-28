@@ -25,8 +25,8 @@ class LoginPage(Page):
         self.click(*self.CONTINUE_BUTTON)
 
     def input_credentials(self):
-        self.input_text('dyak.ilya@gmail.com', *self.REELLY_EMAIL)
-        self.input_text('XrvzakG!E4i@Zzh', *self.REELLY_PASSWORD)
+        self.input_text('*********', *self.REELLY_EMAIL)
+        self.input_text('*********', *self.REELLY_PASSWORD)
 
     def click_on_settings(self):
         self.click(*self.CLICK_SETTINGS)
