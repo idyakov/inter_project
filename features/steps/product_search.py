@@ -30,13 +30,24 @@ def edit_profile(context):
 
 
 @given('Enter some test information in the input fields')
-def edit_profile(context):
+def input_fields(context):
     context.app.login_page.input_fields()
+    sleep(3)
+
+
+@given('Check the right information is present in the input fields')
+def verify_input_fields(context):
+    context.app.login_page.verify_input_fields()
 
 
 @given('Click on Save changes')
-def edit_profile(context):
+def click_on_save(context):
     context.app.login_page.click_on_save()
+
+
+@given('Click on Close')
+def click_on_save(context):
+    context.app.login_page.click_on_close()
 
 # def verify_found_results_text(context, search_word):
 #     assert search_word.lower() in context.driver.current_url.lower(), \
