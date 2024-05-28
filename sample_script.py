@@ -13,16 +13,16 @@ driver = webdriver.Chrome(service=service)
 driver.maximize_window()
 
 # open the url
-driver.get('https://www.google.com/')
+driver.get('https://soft.reelly.io/sign-in')
 
 # populate search field
 search = driver.find_element(By.NAME, 'q')
 search.clear()
 search.send_keys('Car')
-
+#
 # wait for 4 sec
 sleep(4)
-
+#
 # click search button
 driver.find_element(By.NAME, 'btnK').click()
 
