@@ -25,22 +25,25 @@ class LoginPage(Page):
         self.click(*self.CONTINUE_BUTTON)
 
     def input_credentials(self):
-        self.input_text('**************', *self.REELLY_EMAIL) #input your own registered email
-        self.input_text('**************', *self.REELLY_PASSWORD) #input your own registered password
+        self.input_text('dyak.ilya@gmail.com', *self.REELLY_EMAIL) #input your own registered email
+        self.input_text('XrvzakG!E4i@Zzh', *self.REELLY_PASSWORD) #input your own registered password
 
     def click_on_settings(self):
         self.click(*self.CLICK_SETTINGS)
 
     def edit_profile(self):
-        self.click(*self.CLICK_EDIT_PROFILE)
-        sleep(3)
+        WebDriverWait(self.driver, 3).until(
+            EC.presence_of_element_located(self.CLICK_EDIT_PROFILE)
+        ).click()
 
     def input_fields(self):
-        self.input_text('Hebrew', *self.INPUT_FIELD)
-        sleep(3)
+        WebDriverWait(self.driver, 3).until(
+            EC.presence_of_element_located(self.INPUT_FIELD)
+        )
+        self.input_text('Hebrew, Russian', *self.INPUT_FIELD)
 
     def verify_input_fields(self):
-        element = WebDriverWait(self.driver, 10).until(
+        element = WebDriverWait(self.driver, 3).until(
             EC.presence_of_element_located(self.INPUT_FIELD_VERIFICATION)
         )
         text_message = element.get_attribute('value')
