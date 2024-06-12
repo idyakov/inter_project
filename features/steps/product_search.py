@@ -42,11 +42,11 @@ def verify_input_fields(context):
 
 @given('Click on Save changes')
 def click_on_save(context):
-    context.app.login_page.click_on_save()
+    context.app.login_page.click_save_changes()
 
 
 @given('Click on Close')
-def click_on_save(context):
+def click_on_close(context):
     context.app.login_page.click_on_close()
 
 # def verify_found_results_text(context, search_word):
